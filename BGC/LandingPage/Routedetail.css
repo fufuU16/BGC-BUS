@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    position: relative;
+    background-image: url('../image/bgbg.jpg'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Ensures the background image follows the scroll */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: fixed; /* Fixed to ensure it covers the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Gray tone overlay */
+    z-index: -1; /* Places the overlay behind the content */
+    pointer-events: none; /* Ensures the overlay doesn't interfere with content interaction */
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    z-index: 1; /* Ensures header is above the overlay */
+}
+
+
+.logo img {
+    width: 40px;
+    margin-left: 20px;
+}
+
+nav {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1; /* Ensures content is above the blurred background */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.route-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.bus-stop-details {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.bus-stop-card {
+    background-color: #A0D9D9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.bus-stop-card h2 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #2A9D8F;
+    width: 100%;
+}
+
+.bus-stop-card p {
+    color: #333333;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+footer {
+    padding: 10px;
+    background-color: rgba(42, 157, 143, 0.8);
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    z-index: 1; /* Ensures footer is above the blurred background */
+}
+nav a.active {
+    text-decoration: underline;
+    font-weight: bold; /* Optional: to make the active link stand out more */
+    color: #ffffff; /* Optional: change the color of the active link */
+}

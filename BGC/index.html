@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Management Dashboard</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">🚌</div>
+            <nav>
+                <a href="#">Routes</a>
+                <a href="#">Shift Logs</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+            </nav>
+            <div class="search-container">
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <h1>Fleet Management</h1>
+    </header>
+    
+    <section class="summary">
+        <div class="card">43 <br> Buses</div>
+        <div class="card">38 <br> Passengers</div>
+        <div class="card">10 <br> Bus Stops</div>
+        <div class="card">5 <br> Schedules</div>
+    </section>
+
+    <section class="content">
+        <div class="box">2 <br> Bus in places now</div>
+        
+        <!-- Passenger Load Chart -->
+        <div class="chart-container">
+          
+          <div class="bar-chart-wrapper">
+              <div class="bar-chart-scale">
+                  <span>100</span>
+                  <span>80</span>
+                  <span>60</span>
+                  <span>40</span>
+                  <span>20</span>
+                  <span>0</span>
+              </div>
+              <div class="bar-chart">
+                  <div class="bar" style="height: 90%;"></div>
+                  <div class="bar" style="height: 70%;"></div>
+                  <div class="bar" style="height: 50%;"></div>
+                  <div class="bar" style="height: 80%;"></div>
+              </div>
+          </div>
+          <div class="chart-labels">
+              <span>Item 1</span>
+              <span>Item 2</span>
+              <span>Item 3</span>
+              <span>Item 4</span>
+          </div>
+          <h3>Passenger Load</h3>
+      </div>
+      
+        
+        <!-- Shift Logs -->
+        <div class="box shift-logs">
+            <h2>Shift Logs</h2>
+            <p>Juan Dela Cruz<br>Shift: 6:00 am - 11:00 am</p>
+            <p>Cristina Santos<br>Shift: 10:00 am - 6:00 pm</p>
+            <p>Mark Avila<br>Shift: 2:00 pm - 7:00 pm</p>
+        </div>
+        
+        <!-- Maintenance Section -->
+        <div class="box maintenance">
+            <h2>Maintenance</h2>
+            <p>Vehicle Unit Maintenance</p>
+            <p>Fuel Maintenance</p>
+        </div>
+
+        <!-- Chuchness Gauge -->
+        <div class="gauge-container">
+            <h2>Chuchness</h2>
+            <div class="gauge">
+                <div class="needle"></div>
+            </div>
+            <div class="gauge">
+                <div class="needle"></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

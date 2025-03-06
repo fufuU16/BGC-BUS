@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('../image/bgbg.jpg'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Ensures the background image follows the scroll */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+body::before {
+    content: '';
+    position: fixed; /* Fixed to ensure it covers the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Gray tone overlay */
+    z-index: -1; /* Places the overlay behind the content */
+    pointer-events: none; /* Ensures the overlay doesn't interfere with content interaction */
+}
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    z-index: 1; /* Ensures header is above the overlay */
+}
+.logo img {
+    width: 40px;
+    margin-left: 20px;
+}
+
+nav {
+    margin-right: 20px;
+    /* Ensure consistent flex properties */
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.Title {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.Title h1 {
+    font-size: 36px;
+    margin-top: 50px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+#Busdetails {
+    width: 100%; /* Ensure this is set to 70% */
+    max-width: 1500px;
+    margin: 20px auto; /* Center the section horizontally */
+    padding: 30px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 40px;
+}
+
+#Busdetails h2 {
+    grid-column: span 2;
+    font-size: 28px;
+    color: #2A9D8F;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #2A9D8F;
+    padding-bottom: 10px;
+}
+
+#Busdetails .detail-item {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333333;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#Busdetails .detail-item:last-child {
+    border-bottom: none;
+}
+
+#Busdetails .detail-item span {
+    font-weight: bold;
+    color: #333333;
+    display: inline-block;
+    width: 45%; /* Ensures alignment */
+}
+
+#Busdetails .detail-item span:last-child {
+    text-align: right;
+    width: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+    #Busdetails {
+        grid-template-columns: 1fr;
+    }
+
+    #Busdetails h2 {
+        font-size: 24px;
+    }
+
+    #Busdetails .detail-item {
+        font-size: 14px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #Busdetails .detail-item span {
+        width: 100%;
+        text-align: left;
+    }
+}
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #2A9D8F;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #21867A;
+}/* Add this to your passenger.css file */
+nav a.active {
+    text-decoration: underline;
+    font-weight: bold; /* Optional: to make the active link stand out more */
+    color: #ffffff; /* Optional: change the color of the active link */
+}

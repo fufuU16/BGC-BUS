@@ -1,0 +1,167 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  background-color: #ff7f50;
+}
+
+/* Navbar and Header */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #28b3b3;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 1.5em;
+}
+
+nav a {
+  color: #ffffff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.search-container input {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #ffffff;
+}
+
+/* Summary Section */
+.summary {
+  
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+.card {
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  background-color: #28b3b3;
+  padding: 20px;
+  width: 150px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Main Content Section */
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.box {
+  background-color: #009999;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+}
+
+/* Chart and Gauge Styles */
+.chart-container, .gauge-container {
+  background-color: #28b3b3;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 600px;
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+}
+
+h3 {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #ffffff;
+}
+/* Wrapper for bar chart and scale */
+.bar-chart-wrapper {
+  
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Bar Chart Scale */
+.bar-chart-scale {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  margin-right: 10px;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.bar-chart-scale span {
+  margin: 0;
+}
+
+/* Adjusted Bar Chart */
+.bar-chart {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 150px;
+  width: 80%;
+}
+
+.bar {
+  width: 20%;
+  background-color: #ff7f50;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Gauge Style */
+.gauge-container {
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gauge {
+  width: 100px;
+  height: 50px;
+  background-color: #009999;
+  border-radius: 100px 100px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.needle {
+  width: 4px;
+  height: 50px;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: rotate(45deg); /* Adjust this to change needle position */
+}

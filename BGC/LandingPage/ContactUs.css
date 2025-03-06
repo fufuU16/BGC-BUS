@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    position: relative;
+    background-image: url('../image/bgbg.jpg'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Ensures the background image follows the scroll */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: fixed; /* Fixed to ensure it covers the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Gray tone overlay */
+    z-index: -1; /* Places the overlay behind the content */
+    pointer-events: none; /* Ensures the overlay doesn't interfere with content interaction */
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    z-index: 1; /* Ensures header is above the overlay */
+}
+
+
+.logo img {
+    width: 40px;
+    margin-left: 20px;
+}
+
+nav {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #ffffff; /* Text color */
+    margin: 0 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #ffffff; /* Text color */
+}
+
+.contact-info, .feedback-form {
+    background-color: #A0D9D9; /* Cards color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-info h2, .feedback-form h2 {
+    color: #2A9D8F; /* Nav color for headings */
+}
+
+.contact-info p, .feedback-form p {
+    color: #333333; /* Text color */
+    margin-bottom: 10px;
+}
+
+.contact-info ul {
+    padding-left: 20px;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+    color: #333333; /* Text color */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333333; /* Text color */
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #F28C28; /* Buttons color */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #e07b20; /* Slightly darker shade for hover effect */
+}
+
+footer {
+    padding: 10px;
+    background-color: #2A9D8F; /* Nav color */
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+}nav a.active {
+    text-decoration: underline;
+    font-weight: bold; /* Optional: to make the active link stand out more */
+    color: #ffffff; /* Optional: change the color of the active link */
+}
+
+.feedback-message {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #4CAF50; /* Green border */
+    background-color: #dff0d8; /* Light green background */
+    color: #3c763d; /* Dark green text */
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
